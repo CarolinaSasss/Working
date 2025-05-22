@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Carolina Sass & Threads</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Carolina Sass & Threads</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="https://carolina-sass.printify.me/" target="_blank">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Have a question or want to share some sass? Fill out the form below, and we’ll get back to you within 48 business hours!</p>
+        <form id="contact-form" action="/submit-contact" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="shop-now">Send Message</button>
+        </form>
+        <p id="form-message" style="display: none;">Thank you for reaching out! Someone from our team will contact you within 48 business hours.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Carolina Sass & Threads. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Form Submission Feedback -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission for demo
+            document.getElementById('form-message').style.display = 'block';
+            this.reset(); // Clear the form
+        });
+    </script>
+</body>
+</html>

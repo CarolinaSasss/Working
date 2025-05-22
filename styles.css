@@ -2,6 +2,8 @@
 @font-face {
     font-family: 'VacationsInParadise';
     src: url('fonts/VacationsInParadisePersonalUse-qwml.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -14,6 +16,7 @@ body {
     font-family: Arial, sans-serif;
     background: #F5F5DC; /* Sandy beige */
     color: #333;
+    line-height: 1.6;
 }
 
 header {
@@ -43,6 +46,16 @@ nav a:hover {
     border-bottom: 2px solid white;
 }
 
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1E90FF; /* Coastal blue */
+    color: white;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+/* Hero Section (for index.html) */
 .hero {
     position: relative;
     height: 80vh;
@@ -88,12 +101,14 @@ nav a:hover {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1rem;
+    font-family: 'VacationsInParadise', sans-serif;
 }
 
 .cta-button:hover {
     background: #CC3700;
 }
 
+/* Products Section (for index.html) */
 .products {
     max-width: 1200px;
     margin: 2rem auto;
@@ -143,28 +158,110 @@ nav a:hover {
     color: #555;
 }
 
-.product-card a {
+.product-card a.shop-now {
     display: inline-block;
-    background: #1E90FF;
+    background: #1E90FF; /* Coastal blue */
     color: white;
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 0.5rem;
+    font-family: 'VacationsInParadise', sans-serif;
+    font-size: 16px;
 }
 
-.product-card a:hover {
+.product-card a.shop-now:hover {
     background: #1873CC;
 }
 
-footer {
+/* About Section (for about.html) */
+.about {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
     text-align: center;
-    padding: 1rem;
-    background: #1E90FF;
-    color: white;
-    margin-top: 2rem;
 }
 
+.about h2 {
+    font-family: 'VacationsInParadise', sans-serif;
+    font-size: 2rem;
+    color: #1E90FF; /* Coastal blue */
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Contact Section (for contact.html) */
+.contact {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: 'VacationsInParadise', sans-serif;
+    font-size: 2rem;
+    color: #1E90FF; /* Coastal blue */
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form label {
+    font-size: 1.1rem;
+    color: #333;
+    text-align: left;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contact-form button.shop-now {
+    padding: 10px 20px;
+    background: #1E90FF; /* Coastal blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'VacationsInParadise', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button.shop-now:hover {
+    background: #1873CC;
+}
+
+#form-message {
+    color: #1E90FF; /* Coastal blue */
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -182,182 +279,9 @@ footer {
     .product-grid {
         grid-template-columns: 1fr;
     }
-/* styles.css */
 
-/* Previous styles from index.html (included for context) */
-@font-face {
-    font-family: 'Vacation Paradise';
-    src: url('path-to-vacation-paradise-font.woff2') format('woff2'),
-         url('path-to-vacation-paradise-font.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* General styling for consistency */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #ff6200; /* Orange theme */
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* About Section */
-.about {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.about h2 {
-    font-size: 2em;
-    color: #ff6200;
-}
-
-.about p {
-    font-size: 1.2em;
-    color: #333;
-}
-
-/* Contact Section */
-.contact {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 2em;
-    color: #ff6200;
-}
-
-.contact p {
-    font-size: 1.2em;
-    color: #333;
-}
-
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-#contact-form label {
-    font-size: 1.1em;
-    color: #333;
-    text-align: left;
-}
-
-#contact-form input,
-#contact-form textarea {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-#contact-form textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-#contact-form button.shop-now {
-    padding: 10px 20px;
-    background-color: #ff6200;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Vacation Paradise', sans-serif;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#contact-form button.shop-now:hover {
-    background-color: #e55a00;
-}
-
-#form-message {
-    color: #ff6200;
-    font-size: 1.1em;
-    margin-top: 20px;
-}
-
-/* Product Card Styles (from previous response) */
-.product-card {
-    text-align: center;
-    margin: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-}
-
-.shop-now {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6200;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: 'Vacation Paradise', sans-serif;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.shop-now:hover {
-    background-color: #e55a00;
-}
-
-.product-card h3 {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-.product-card p {
-    font-size: 1.2em;
-    color: #333;
-    margin: 10px 0;
-}
-
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+    .about h2,
+    .contact h2 {
+        font-size: 1.8rem;
+    }
 }
